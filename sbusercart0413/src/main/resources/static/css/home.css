@@ -1,0 +1,85 @@
+/* ===== PhoneCart – Home (深藍商業風) ===== */
+
+/* src/main/resources   static>css   */
+
+
+:root{
+  --brand-primary: #2563eb;
+  --brand-primary-600: #1e4fd6;
+  --brand-primary-700: #173fb3;
+  --nav-dark: #0b1e3f;
+  --text-on-dark: #dbe8ff;
+  --card-border: rgba(152,181,255,.25);
+}
+
+/* 全局背景 */
+body{
+  background: linear-gradient(135deg, #0f0f1a, #1b1b2f);
+  color: #f0f0f0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 導覽列 */
+.navbar-dark.bg-dark{
+  background: linear-gradient(180deg, var(--nav-dark) 0%, #0f274f 100%) !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+.navbar-dark .navbar-brand{ font-weight:600; letter-spacing:.3px; }
+.navbar-dark .nav-link{ color: var(--text-on-dark); opacity:.9; transition:.2s; }
+.navbar-dark .nav-link:hover, .navbar-dark .nav-link.active{ color:#fff; opacity:1; }
+
+/* 首頁 hero */
+.hero--blue{
+  background:
+    radial-gradient(1000px 500px at 10% -10%, rgba(37,99,235,.22), transparent 55%),
+    radial-gradient(900px 540px at 90% 0%, rgba(30,79,214,.18), transparent 45%),
+    linear-gradient(180deg, #0e1b30 0%, #102a55 55%, #113364 100%);
+  color:#eaf2ff;
+}
+.hero--blue .lead{ color:#cfe0ff; }
+
+/* 卡片/玻璃 */
+.shadow-soft{ box-shadow: 0 10px 24px rgba(0,0,0,.10); }
+.card, .product-card, .table-glass{
+  border: 1px solid var(--card-border);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+}
+.card-title{ font-weight:600; }
+.table-glass th, .table-glass td{ color:#fff; }
+.table-glass thead{ background: rgba(37,99,235,0.10); }
+.table-glass tbody tr:hover{ background: rgba(37,99,235,0.15); }
+
+/* 按鈕 */
+.btn-primary{
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  box-shadow: 0 6px 16px rgba(37,99,235,.28);
+}
+.btn-primary:hover{
+  background-color: var(--brand-primary-600);
+  border-color: var(--brand-primary-600);
+}
+.btn-outline-primary{
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+.btn-outline-primary:hover{
+  background-color: var(--brand-primary);
+  color:#000;
+  box-shadow: 0 0 10px var(--brand-primary);
+}
+
+/* 霓虹行動按鈕（可用在 CTA） */
+.btn-neon{
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  border: none;
+  color: #000;
+  box-shadow: 0 0 8px #00f2fe;
+  transition: all .2s;
+}
+.btn-neon:hover{ box-shadow: 0 0 20px #00f2fe; transform: translateY(-1px); }
+
+/* 小徽章（購物車數量一致化） */
+#cartCountBadge{ background: var(--brand-primary); }
